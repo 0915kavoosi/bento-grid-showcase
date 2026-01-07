@@ -1,0 +1,124 @@
+@import "font-style";
+@import "colors";
+:root {
+    --color-primery_bg: #F8E8F4;
+    --color-primery__background: #EE3B07;
+    --color-primery: #e1275f;
+    --color-secendery: #e75480;
+    --color-text: #f7f7f769;
+    --color-text-dark: #777;
+    --color-Grey-light-1: #faf9f9;
+    --color-Grey-light-2: #f4f2f2;
+    --color-Grey-light-3: #f0eeee;
+    --color-Grey-light-4: #ccc;
+    --color-Grey-dark-1: #333;
+    --color-Grey-dark-2: #777;
+    --color-Grey-dark-3: #999;
+    --line: 1px solid var(--color-Grey-light-2);
+    --box-shadow-1: 0 2rem 4rem rgba(0, 0, 0, 0.05);
+}
+body {
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.container {
+    border: 1px solid;
+    padding: 0.4rem;
+    position: relative;
+    bottom: 0.5rem;
+    right: 2rem;
+    // width: 100rem;
+    // width: 10rem;
+    width: 100rem;
+    height: 1.5rem;
+    background-color: $color-black;
+}
+.p {
+    position: relative;
+    bottom: 1rem;   
+    display: flex;
+    justify-content: center;
+    color: var(--color-Grey-light-2);
+    font-family: 'font__header';
+}
+.list {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    list-style: none;
+    position: relative;
+    top: 5rem;
+}
+.list__item {
+    display: inline-block;
+    left: 21rem;
+    position: relative;
+    bottom: 11rem;
+
+}
+
+.item {
+    font-size: 0.9rem;
+    padding: 1rem;
+    border: none;
+    background-color: #fff;
+    font-family: "font__header";
+}
+.span_item {
+    background-color: blue;
+    padding: 0.2rem;
+    color: #fff;
+    border: none;
+    border-radius: 3px;
+    font-family: "font__header";
+}
+.item:hover {
+    border-radius: 5px;
+    cursor: pointer;
+    background-color: var(--color-text);
+}
+.item__link {
+    position: relative;
+    bottom: 0.1rem;
+    border-radius: 20px;
+    outline: none;
+    // border: 1px solid;
+    background-color: black;
+    color: #fff;
+    // height: 5rem;
+    padding: 0.7rem;
+    text-decoration: none;
+    font-family: "font__header";
+}
+.photo {
+    // position: relative;
+    bottom: 2rem;
+    width: 19rem;
+    object-fit: cover;
+    height: 5rem;
+}
+.image__Frontend {
+    position: relative;
+    // bottom: rem;
+    left: 10rem;
+    // bottom: 1rem;
+}
+.image {
+    width: 5rem;
+    object-fit: cover;
+    height: 2rem;
+    position: relative;
+    top: 5rem;
+}
+.image1 {
+    position: relative;
+    top: 5rem;
+    width: 5rem;
+}
+.icone_gitgub {
+    border-radius: 50%;
+    width: 2rem;
+
+}
