@@ -4,12 +4,7 @@
 
 body {
     overflow: hidden;
-    // display: flex;
-    // justify-content: center;
-    // align-items: center;
-    // background-color: red;
     background-color: rgb(250 250 250 / var(--tw-bg-opacity, 1));
-    // max-width: 100rem;
 }    
 .header {
     display: flex;
@@ -30,7 +25,6 @@ body {
     display: flex;
     position: relative;
     right: 15rem;
-    // font-family: font__header;
     font-weight: bold;
     font-size: 1.2rem;
 }
@@ -40,7 +34,6 @@ body {
     display: flex;
     gap: 20px; 
     position: relative;
-    // left: 65rem;
     top: 0.5rem;
 }
 
@@ -116,23 +109,102 @@ body {
     right: 1.5rem;
     font-weight: bold;
 }
-.btn__STEP1 > span {
-    display: flex;
-    font-size: 1rem;
-    color: blue;
-}
+
 .container-card {
     display: flex;
     justify-content: center;
     position: relative;
     top: 4rem;
-    border-bottom: 1px solid;
+    align-items: center;
+    right: 10rem;
 }
-.card_btn {
-    border-bottom: 1px solid;
-    width: 17rem;
-}
-.btn__STEP1 {
+.btn-textline {
+    position: relative;
+    right: 10rem;
+    background: none;
     border: none;
-    background-color: rgb(250 250 250 / var(--tw-bg-opacity, 1));
+    padding: 0;
+    cursor: pointer;
+}
+.btn-textline span {
+    display: flex ;
+    position: relative;
+    font-size: 1.3rem;
+}
+.btn-textline span:last-child::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 2.5rem;
+    width: 18.8rem;
+    height: 2px;
+    background: rgba(0, 0, 255, 0.714);
+}
+.my-btn { 
+    background: none;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+}
+
+.my-btn span {
+    display: flex ; 
+    position: relative;
+    font-size: 1.3rem;
+}
+
+
+.my-btn span:last-child::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 2.5rem; 
+    width: 20rem;
+    height: 2px;
+    background: $color-Grey-dark-2;
+}
+.tline-btn {
+    background: none;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+}
+.tline-btn span {
+    display: flex ;
+    position: relative;
+    font-size: 1.3rem;
+    left: 11.1rem;
+}
+
+.tline-btn span:last-child::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 2.5rem; 
+    width: 20rem;
+    height: 2px;
+    background: $color-Grey-dark-2;
+}
+.btn-success {
+    background: none;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+    position: relative;
+    left: 21.6rem;
+}
+.btn-success span {
+    display: flex ; 
+    position: relative;
+    font-size: 1.3rem; 
+}
+
+.btn-success span:last-child::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 2.5rem; 
+    width: 20rem;
+    height: 2px;
+    background: $color-Grey-dark-2;
 }
