@@ -1,5 +1,6 @@
 @import "font-style";
 @import "colors";
+@import "mixins";
 // variabel css
 
 body {
@@ -13,14 +14,10 @@ body {
     padding: 10px 20px;
     border-bottom: 1px solid $color-Grey-dark-2;
 }
-
-
 .logo {
     font-size: 24px;
     font-weight: bold;
 }
-
-
 .nav {
     display: flex;
     position: relative;
@@ -28,7 +25,6 @@ body {
     font-weight: bold;
     font-size: 1.2rem;
 }
-
 .nav > ul {
     list-style: none;
     display: flex;
@@ -98,6 +94,7 @@ body {
     border-top: 1px solid $color-Grey-dark-2;
     position: relative;
     top: 2rem;
+    height: 70rem;
 }
 .text__divider {
     position: relative;
@@ -125,43 +122,41 @@ body {
     border: none;
     padding: 0;
     cursor: pointer;
-}
-.btn-textline span {
-    display: flex ;
-    position: relative;
-    font-size: 1.3rem;
-}
+}.btn-textline span {
+    @include button-base}   
 .btn-textline span:last-child::after {
     content: "";
     position: absolute;
     left: 0;
     top: 2.5rem;
-    width: 18.8rem;
+    width: 19.3rem;
     height: 2px;
     background: rgba(0, 0, 255, 0.714);
+}
+.my-btn.active::after{
+    background: #007bff;
+    opacity: 1;
 }
 .my-btn { 
     background: none;
     border: none;
     padding: 0;
     cursor: pointer;
-}
-
-.my-btn span {
-    display: flex ; 
-    position: relative;
-    font-size: 1.3rem;
-}
-
-
+}.my-btn span {
+    @include button-base;}
 .my-btn span:last-child::after {
     content: "";
     position: absolute;
     left: 0;
     top: 2.5rem; 
-    width: 20rem;
+    width: 20.9rem;
     height: 2px;
-    background: $color-Grey-dark-2;
+    opacity: 0.2;
+    background: #000;
+    transition: opacity 0.3s ease;
+}
+.my-btn span:hover::after {
+    opacity: 1;
 }
 .tline-btn {
     background: none;
@@ -170,10 +165,9 @@ body {
     cursor: pointer;
 }
 .tline-btn span {
-    display: flex ;
     position: relative;
-    font-size: 1.3rem;
     left: 11.1rem;
+    @include button-base
 }
 
 .tline-btn span:last-child::after {
@@ -181,9 +175,14 @@ body {
     position: absolute;
     left: 0;
     top: 2.5rem; 
-    width: 20rem;
+    width: 21rem;
     height: 2px;
-    background: $color-Grey-dark-2;
+    opacity: 0.2;
+    background: #000;
+    transition: opacity 0.3s ease;
+}
+.tline-btn span:hover::after {
+    opacity: 1;
 }
 .btn-success {
     background: none;
@@ -194,11 +193,8 @@ body {
     left: 21.6rem;
 }
 .btn-success span {
-    display: flex ; 
-    position: relative;
-    font-size: 1.3rem; 
+    @include button-base
 }
-
 .btn-success span:last-child::after {
     content: "";
     position: absolute;
@@ -206,5 +202,95 @@ body {
     top: 2.5rem; 
     width: 20rem;
     height: 2px;
-    background: $color-Grey-dark-2;
+    // background: $color-Grey-dark-2;
+    opacity: 0.2;
+    background: #000;
+    transition: opacity 0.3s ease;
+}
+.btn-success span:hover::after {
+    opacity: 1;
+}
+.bento-card {
+   display: flex;
+    width: 75rem;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    left: 23rem;
+    top: 10rem;
+    // background: gainsboro;
+    // background: rgba(220, 220, 220, 0.188);
+    background: #fff;
+    height: 25rem;
+    border-radius: 10px;
+    border: 0.2px solid rgba(128, 128, 128, 0.399);
+}
+
+.bento-card_wide {
+    display: flex;
+    position: relative;
+    right: 16rem;
+    width: 39rem;
+    height: 20rem;
+}
+.item_wrapper {
+    width: 5rem;
+    position: relative;
+    left: 19.3rem;                                                                                                                                                        
+}                                            
+.text_haeder {                                                                          
+    display: flex;
+    gap: 5rem;
+    height: 1.5rem;
+    width: 39rem;
+}
+.text-main {
+    display: flex;
+}
+.text-main > span {
+    height: 1.5rem;
+    width: 3.6rem;
+    color: rgba(0, 0, 139, 0.614);
+    display: flex;
+    font-family: font-title;
+    justify-content: center;
+    border-radius: 15px;
+    background: #69d6de6b; 
+}
+.card-list  {
+    display: flex;
+    gap: 2rem;
+    position: relative;
+    bottom: 1.2rem;
+    list-style: none;
+    color: rgb(0, 170, 255);
+    font-family: font-title;
+    font-size: 1.1rem;
+}
+.card-list li:nth-child(2) {
+    color: $color-blue;
+}
+.item_wrapper {
+    border: 1px solid #34D399;
+    display: flex;
+    border-radius: 4px;
+    justify-content: center;
+    align-items: center;
+    padding: 0.5rem;
+    font-family: font-title;
+}
+
+.item_wrapper > span:nth-child(1) {
+    border-bottom-left-radius: 4px;
+    border-top-left-radius: 4px;
+    position: relative;
+    right: 0.5rem;
+    padding: 0 0.4rem;
+    display: flex;
+    justify-content: center;
+    background: #34D399;
+    color: white;
+}
+.item_wrapper > span:nth-child(2) {
+    color: #34D399;
 }

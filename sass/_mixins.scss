@@ -1,0 +1,7 @@
+@mixin button-base() {
+    opacity: 0.5;
+    font-weight: bold;
+    display: flex ; 
+    position: relative;
+    font-size: 1.3rem;
+}
